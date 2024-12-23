@@ -2,7 +2,7 @@
 
 Olá! Meu nome é Kauã Aissa, e este é o meu portfólio. Aqui, você encontrará projetos que desenvolvi, minhas competências técnicas e um pouco mais sobre mim.
 
-## [Visite meu portfólio online](kauaaissa.github.io)
+[Visite meu portfólio online](mailto:kaua.aissa.dev@gmail.com)
 
 ### Explore meu perfil, conheça minhas competências e veja como posso agregar valor aos seus projetos.
 
