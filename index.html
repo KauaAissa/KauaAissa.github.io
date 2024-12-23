@@ -16,6 +16,7 @@
     />
     <!-- CSS do Projeto -->
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- Icone aba -->
     <link
       rel="shortcut icon"
       href="img/person-circle-outline-icon.png"
@@ -23,17 +24,34 @@
     />
   </head>
   <body>
+    <button id="language-toggle">
+      <ion-icon name="language-outline"></ion-icon>
+    </button>
+
     <main id="container">
       <aside id="bio-container">
         <h2>Kauã Aissa</h2>
+
         <img id="bio-image" src="img/profile.png" alt="Kauã Aissa" />
-        <p>
+
+        <p class="language-pt">
           Olá, meu nome é Kauã Aissa e sou
           <span class="highlight">Desenvolvedor FullStack</span> e
-          <span class="highlight">Tecnólogo em Desenvolvimento de Sistemas</span
-          >.
+          <span class="highlight"
+            >Tecnólogo em Desenvolvimento de Sistemas</span
+          >
         </p>
-        <p id="welcome-text">Seja bem-vindo!</p>
+        <p class="language-en" style="display: none">
+          Hello, my name is Kauã Aissa and I am a
+          <span class="highlight">Full Stack Developer</span> and a
+          <span class="highlight">Technologist in Systems Development</span>
+        </p>
+
+        <p id="welcome-text" class="language-pt">Seja bem-vindo!</p>
+        <p id="welcome-text" class="language-en" style="display: none">
+          Welcome!
+        </p>
+
         <ul id="social-container">
           <li>
             <a href="https://wa.me/5519999255022" target="_blank"
@@ -53,36 +71,60 @@
             ></a>
           </li>
         </ul>
+
         <div id="email-container">
-          <ion-icon name="mail-outline"></ion-icon
-          ><a href="mailto:kaua.aissa.dev@gmail.com.br"
+          <ion-icon name="mail-outline"></ion-icon>
+          <a href="mailto:kaua.aissa.dev@gmail.com.br"
             >kaua.aissa.dev@gmail.com.br</a
           >
         </div>
       </aside>
+
       <section id="about-container">
         <h1 id="name">Kauã Aissa</h1>
-        <p id="title">
+
+        <p id="title" class="language-pt">
           <span class="highlight">Desenvolvedor Full Stack</span> e
           <span class="highlight"
             >Tecnólogo em Desenvolvimento de Sistemas</span
           >
         </p>
-        <p class="description">
+        <p id="title" class="language-en" style="display: none">
+          <span class="highlight">Full Stack Developer</span> and
+          <span class="highlight">Technologist in Systems Development</span>
+        </p>
+
+        <p class="description language-pt">
           Sou um desenvolvedor apaixonado por tecnologia, com experiência em
           participar de todas as etapas de projetos, desde a
-          <span class="highlight">
-            definição das regras de negócio e levantamento de requisitos
-          </span>
+          <span class="highlight"
+            >definição das regras de negócio e levantamento de requisitos</span
+          >
           até o <span class="highlight">deploy da aplicação</span>.
         </p>
-        <p class="description">
+        <p class="description language-en" style="display: none">
+          I am a developer passionate about technology, with experience in all
+          stages of projects, from the
+          <span class="highlight"
+            >definition of business rules and requirements gathering</span
+          >
+          to the <span class="highlight">application deployment</span>.
+        </p>
+
+        <p class="description language-pt">
           Atuo tanto no <span class="highlight">front-end</span> quanto no
           <span class="highlight">back-end</span> e estudo diariamente para
           aprimorar minhas habilidades, buscando sempre escrever código de alta
           qualidade e construir soluções eficientes e impactantes.
         </p>
-        <p class="description">
+        <p class="description language-en" style="display: none">
+          I work on both <span class="highlight">front-end</span> and
+          <span class="highlight">back-end</span> and study daily to improve my
+          skills, always aiming to write high-quality code and build efficient
+          and impactful solutions.
+        </p>
+
+        <p class="description language-pt">
           Além disso, adoro aprender novas linguagens, sejam de programação ou
           idiomas. Tenho nível avançado de
           <span class="highlight">inglês</span>, o que me permite colaborar em
@@ -92,13 +134,34 @@
           conhecimentos em uma nova língua e enriquecer minhas habilidades
           culturais e profissionais.
         </p>
+        <p class="description language-en" style="display: none">
+          In addition, I love learning new languages, whether programming or
+          spoken languages. I have an advanced level of
+          <span class="highlight">English</span>, which allows me to collaborate
+          on international projects and access cutting-edge technical content.
+          Currently, I am studying <span class="highlight">Spanish</span> to
+          expand my knowledge in a new language and enrich my cultural and
+          professional skills.
+        </p>
 
         <a href="https://github.com/KauaAissa" id="btn-projects"
           ><ion-icon name="share-social-outline"></ion-icon>
-          <span>Ver Projetos</span></a
-        >
-        <h2 id="skills-section-title">Minhas Skills</h2>
-        <p class="description">Conheça as tecnologias que domino:</p>
+          <span class="language-pt">Ver Projetos</span>
+          <span class="language-en" style="display: none">View Projects</span>
+        </a>
+
+        <h2 id="skills-section-title" class="language-pt">Minhas Skills</h2>
+        <h2 id="skills-section-title" class="language-en" style="display: none">
+          My Skills
+        </h2>
+
+        <p class="description language-pt">
+          Conheça as tecnologias que domino:
+        </p>
+        <p class="description language-en" style="display: none">
+          Here are the technologies I master:
+        </p>
+
         <div id="skills-container">
           <div class="skills-box">
             <p class="skills-title">Front-end</p>
@@ -131,7 +194,9 @@
         </div>
       </section>
     </main>
+
     <!-- Ion Icons -->
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

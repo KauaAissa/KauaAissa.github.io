@@ -81,6 +81,39 @@
 #social-container li a {
   color: var(--main-color);
   font-size: 30px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#social-container li a[href*="wa.me"] {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#social-container li a[href*="wa.me"]:hover {
+  color: #25d366;
+  transform: scale(1.2);
+}
+
+#social-container li a[href*="linkedin.com"] {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#social-container li a[href*="linkedin.com"]:hover {
+  color: #0077b5;
+  transform: scale(1.2);
+}
+
+#social-container li a[href*="instagram.com"] {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#social-container li a[href*="instagram.com"]:hover {
+  color: #e4405f;
+  transform: scale(1.2);
+}
+
+#social-container li a ion-icon {
+  font-size: 30px;
+  transition: transform 0.3s ease;
 }
 
 #email-container {
@@ -97,6 +130,7 @@
   color: var(--main-text-color);
   text-decoration: none;
   max-width: 225px;
+  transition: color 0.3s ease;
 }
 
 #email-container ion-icon {
@@ -104,9 +138,18 @@
   font-size: 20px;
   margin-right: 5px;
   max-width: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* about container */
+#email-container:hover ion-icon {
+  color: #00b0ff;
+  transform: scale(1.2);
+}
+
+#email-container a:hover {
+  color: #00b0ff;
+}
+
 #name {
   font-size: 42px;
   margin-bottom: 15px;
@@ -131,7 +174,7 @@
   border: 2px solid var(--main-color);
   border-radius: 5px;
   text-decoration: none;
-  transition: 0.5s;
+  transition: 0.5s, transform 0.3s ease;
   margin: 25px 0;
   padding: 12px 10px;
   width: 150px;
@@ -151,6 +194,20 @@
 
 #btn-projects:hover {
   background-color: transparent;
+  transform: scale(1.1);
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 #skills-section-title {
@@ -183,6 +240,48 @@
 .skills-box i {
   font-size: 45px;
   margin-right: 10px;
+}
+
+.language-pt,
+.language-en {
+  transition: opacity 0.5s ease;
+}
+
+.language-pt {
+  opacity: 1;
+}
+
+.language-en {
+  opacity: 0;
+  display: none;
+}
+
+#language-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #3f51b5;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  padding: 10px 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#language-toggle:hover {
+  background-color: #303f8d;
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+#language-toggle ion-icon {
+  font-size: 24px;
 }
 
 /* Mobile */
