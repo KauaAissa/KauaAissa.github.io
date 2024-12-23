@@ -276,7 +276,6 @@
 
 #language-toggle:hover {
   background-color: #303f8d;
-  transform: scale(1.1) rotate(5deg);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
