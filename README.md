@@ -16,6 +16,6 @@ ou copie e cole a URL - *https://aissa.space*
 ## Entre em contato
 
 - Email: [kaua.aissa.dev@gmail.com](mailto:kaua.aissa.dev@gmail.com)
-- LinkedIn: [linkedin.com/in/kauã-aissa](https://www.linkedin.com/in/kauã-aissa-b89089343/)
+- LinkedIn: [linkedin.com/in/KauaAissa](https://www.linkedin.com/in/kauaaissa/)
 
 Obrigado por visitar meu portfólio! Fique à vontade para entrar em contato ou deixar seu feedback.
