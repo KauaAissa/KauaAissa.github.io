@@ -331,3 +331,27 @@
     font-size: 60px;
   }
 }
+
+/* Transition */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+}
+
+.mask {
+  flex: 1;
+  background-color: #0d0d0d;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+}

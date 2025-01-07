@@ -42,3 +42,24 @@ languageToggle.addEventListener("click", () => {
     }, 500);
   }
 });
+
+const timeline = gsap.timeline();
+
+timeline
+  .to(".mask", {
+    y: "-100%",
+    stagger: 0.2, // Efeito em cascata
+    duration: 1,
+    ease: "power2.inOut",
+  })
+  .to(".overlay", {
+    opacity: 0,
+    duration: 0.5,
+    onComplete: () => document.querySelector(".overlay").remove(),
+  })
+  .from(".content", {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    ease: "power2.out",
+  });
