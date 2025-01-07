@@ -265,41 +265,41 @@ body {
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: #283593; /* Cor sólida mais forte, com uma base mais "séria" */
+  background-color: #283593;
   color: white;
-  border: 3px solid #1a237e; /* Borda mais espessa e escura */
-  padding: 13px 17px; /* Mais espaço para o botão, tornando-o mais robusto */
-  border-radius: 10px; /* Cantos mais suaves, mas menos arredondados, para um visual mais forte */
+  border: 3px solid #1a237e;
+  padding: 13px 17px;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   z-index: 1000;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Sombra profunda para dar uma sensação de elevação */
-  transition: all 0.3s ease; /* Transição suave */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
 }
 
 #language-toggle:hover {
-  background-color: #3949ab; /* Cor ligeiramente mais clara no hover */
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Aumenta a sombra para destacar mais */
-  transform: scale(1.05); /* Aumenta um pouco o botão */
-  border-color: #536dfe; /* Borda mais clara ao passar o mouse */
+  background-color: #3949ab;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+  border-color: #536dfe;
 }
 
 #language-toggle:active {
-  transform: scale(0.98); /* Efeito de pressionar o botão */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Sombra mais suave ao pressionar */
+  transform: scale(0.98);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 #language-toggle ion-icon {
-  font-size: 30px; /* Tamanho maior para o ícone, criando um visual mais robusto */
+  font-size: 30px;
   transition: transform 0.3s ease, color 0.3s ease;
   color: #ffffff;
 }
 
 #language-toggle:hover ion-icon {
-  transform: rotate(15deg); /* Rotação suave ao passar o mouse */
-  color: #ff4081; /* Cor vibrante ao passar o mouse */
+  transform: rotate(15deg);
+  color: #ff4081;
 }
 
 /* Mobile */
