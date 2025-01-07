@@ -16,6 +16,10 @@
   --about-bg-color: #0d0d0d; /* Preto profundo para a seção about */
 }
 
+body {
+  background-color: #121212;
+}
+
 /* General */
 .highlight {
   color: var(--main-color);
@@ -261,27 +265,41 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: #3f51b5;
+  background-color: #283593; /* Cor sólida mais forte, com uma base mais "séria" */
   color: white;
-  border: 2px solid #283475;
-  padding: 10px 15px;
-  border-radius: 50%;
+  border: 3px solid #1a237e; /* Borda mais espessa e escura */
+  padding: 13px 17px; /* Mais espaço para o botão, tornando-o mais robusto */
+  border-radius: 10px; /* Cantos mais suaves, mas menos arredondados, para um visual mais forte */
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   z-index: 1000;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Sombra profunda para dar uma sensação de elevação */
+  transition: all 0.3s ease; /* Transição suave */
 }
 
 #language-toggle:hover {
-  background-color: #303f8d;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
+  background-color: #3949ab; /* Cor ligeiramente mais clara no hover */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Aumenta a sombra para destacar mais */
+  transform: scale(1.05); /* Aumenta um pouco o botão */
+  border-color: #536dfe; /* Borda mais clara ao passar o mouse */
+}
+
+#language-toggle:active {
+  transform: scale(0.98); /* Efeito de pressionar o botão */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Sombra mais suave ao pressionar */
 }
 
 #language-toggle ion-icon {
-  font-size: 24px;
+  font-size: 30px; /* Tamanho maior para o ícone, criando um visual mais robusto */
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #ffffff;
+}
+
+#language-toggle:hover ion-icon {
+  transform: rotate(15deg); /* Rotação suave ao passar o mouse */
+  color: #ff4081; /* Cor vibrante ao passar o mouse */
 }
 
 /* Mobile */
@@ -348,10 +366,4 @@
 .mask {
   flex: 1;
   background-color: #0d0d0d;
-}
-body {
-  margin: 0;
-  overflow: hidden;
-  font-family: Arial, sans-serif;
-  background-color: #121212;
 }
