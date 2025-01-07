@@ -261,45 +261,46 @@ body {
   display: none;
 }
 
+/* Estilo geral do botão */
 #language-toggle {
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: #283593;
-  color: white;
-  border: 3px solid #1a237e;
-  padding: 13px 17px;
-  border-radius: 10px;
+  background-color: #333;
+  color: var(--main-text-color);
+  border: 2px solid #555;
+  padding: 14px 18px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   z-index: 1000;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
 }
 
-#language-toggle:hover {
-  background-color: #3949ab;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-  transform: scale(1.05);
-  border-color: #536dfe;
-}
-
+/* Efeito de clique */
 #language-toggle:active {
-  transform: scale(0.98);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(0.95);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  background-color: #555;
+}
+
+/* Efeito de hover para desktop */
+#language-toggle:hover {
+  background-color: #444;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 #language-toggle ion-icon {
-  font-size: 30px;
+  font-size: 20px;
   transition: transform 0.3s ease, color 0.3s ease;
-  color: #ffffff;
 }
 
 #language-toggle:hover ion-icon {
-  transform: rotate(15deg);
-  color: #ff4081;
+  color: #6072c7;
 }
 
 /* Mobile */
