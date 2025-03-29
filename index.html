@@ -41,10 +41,16 @@
       <div class="mask"></div>
     </div>
     <div class="content">
-      <button id="language-toggle">
-        <ion-icon name="language-outline"></ion-icon>
-      </button>
-
+      <header>
+        <nav class="navbar">
+          <div class="nav-container">
+            <!-- Botão de troca de idioma -->
+            <button id="language-toggle">
+              <ion-icon name="language"></ion-icon>
+            </button>
+          </div>
+        </nav>
+      </header>
       <main id="container">
         <aside id="bio-container">
           <h2>Kauã Aissa</h2>
@@ -61,7 +67,9 @@
           <p class="language-en" style="display: none">
             Hello, my name is Kauã Aissa and I am a
             <span class="highlight">Full Stack Developer</span> and a
-            <span class="highlight">Student of Systems analysis and development</span>
+            <span class="highlight"
+              >Student of Systems analysis and development</span
+            >
           </p>
 
           <p id="welcome-text" class="language-pt">Seja bem-vindo!</p>
@@ -108,7 +116,9 @@
           </p>
           <p id="title" class="language-en" style="display: none">
             <span class="highlight">Full Stack Developer</span> and
-            <span class="highlight">Student of systems analysis and development</span>
+            <span class="highlight"
+              >Student of systems analysis and development</span
+            >
           </p>
 
           <p class="description language-pt">
@@ -221,7 +231,15 @@
     <!-- Script Transition -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <!-- Ion Icons -->
-    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
     <script src="js/scripts.js"></script>
   </body>
 </html>
