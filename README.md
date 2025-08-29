@@ -19,3 +19,15 @@ ou copie e cole a URL - *https://aissa.space*
 - LinkedIn: [linkedin.com/in/KauaAissa](https://www.linkedin.com/in/kauaaissa/)
 
 Obrigado por visitar meu portfólio! Fique à vontade para entrar em contato ou deixar seu feedback.
+
+---
+
+## 📌 Autor
+
+Desenvolvido por **Kauã Aissa** 💻
+<img src="assets/blackcat.png" alt="Logo Gato Preto" width="120" align="right" />
+
+🔗 [LinkedIn](https://www.linkedin.com/in/kauaaissa)  
+🔗 [GitHub](https://github.com/KauaAissa)
+
+---
