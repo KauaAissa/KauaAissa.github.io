@@ -2,8 +2,8 @@
 
 Olá! Meu nome é Kauã Aissa, e este é o meu Web Site que contem meu portfólio. Aqui, você encontrará projetos que desenvolvi, minhas competências técnicas e um pouco mais sobre mim.
 
-[Visite meu Web Site online](https://aissa.space)
-ou copie e cole a URL - *https://aissa.space*
+[Visite meu Web Site online](https://kauaaissa.github.io/)
+ou copie e cole a URL - *https://kauaaissa.github.io/*
 
 ### Explore meu perfil, conheça minhas competências e veja como posso agregar valor aos seus projetos.
 
