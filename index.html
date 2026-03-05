@@ -1,38 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfólio Kauã Aissa</title>
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Dev Icon Fonts -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css"
-    />
-    <!-- CSS do Projeto -->
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
     <link rel="stylesheet" href="css/styles.css" />
-    <!-- Icone aba -->
+    
     <link rel="shortcut icon" href="assets/blackcat.ico" type="image/x-icon" />
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-KW1222F23D"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KW1222F23D"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+      function gtag() { dataLayer.push(arguments); }
       gtag("js", new Date());
-
       gtag("config", "G-KW1222F23D");
     </script>
+
+    <style>
+      /* Seção do Carrossel - Limitando o tamanho máximo */
+      .carousel-section {
+        margin: 40px auto;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        max-width: 900px;
+        overflow: hidden;
+      }
+
+      .swiper {
+        width: 100%;
+        padding-bottom: 40px;
+      }
+
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: 12px;
+        transition: transform 0.4s ease;
+        display: block;
+      }
+
+      .swiper-slide:hover img {
+        transform: scale(1.03);
+      }
+
+      :root {
+        --swiper-navigation-color: #fff;
+        --swiper-pagination-color: #00d2ff;
+      }
+
+      .swiper-button-next, .swiper-button-prev {
+        transform: scale(0.7);
+      }
+
+      /* Ajustes de hover nas skills */
+      .skills-box {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .skills-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      }
+
+      /* Estilo básico para o botão de idioma se não estiver no seu CSS */
+      #language-toggle {
+        background: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        cursor: pointer;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+    </style>
   </head>
   <body>
     <div class="overlay">
@@ -40,165 +99,98 @@
       <div class="mask"></div>
       <div class="mask"></div>
     </div>
+    
     <div class="content">
       <header>
         <nav class="navbar">
           <div class="nav-container">
-            <!-- Botão de troca de idioma -->
-            <button id="language-toggle">
+            <button id="language-toggle" title="Mudar Idioma / Change Language">
               <ion-icon name="language"></ion-icon>
             </button>
           </div>
         </nav>
       </header>
+
       <main id="container">
         <aside id="bio-container">
           <h2>Kauã Aissa</h2>
-
           <img id="bio-image" src="img/DIE_1093.JPG" alt="Kauã Aissa" />
+
           <p class="language-pt">
             Olá, meu nome é Kauã Aissa e sou
             <span class="highlight">Desenvolvedor FullStack</span> e
-            <span class="highlight"
-              >Estudante de Analise e Desenvolvimento de Sistemas</span
-            >
+            <span class="highlight">Estudante de Análise e Desenvolvimento de Sistemas</span>
           </p>
           <p class="language-en" style="display: none">
             Hello, my name is Kauã Aissa and I am a
             <span class="highlight">Full Stack Developer</span> and a
-            <span class="highlight"
-              >Student of Systems analysis and development</span
-            >
+            <span class="highlight">Student of Systems Analysis and Development</span>
           </p>
 
-          <p id="welcome-text" class="language-pt">Seja bem-vindo!</p>
-          <p id="welcome-text" class="language-en" style="display: none">
-            Welcome!
-          </p>
+          <p class="language-pt welcome-text">Seja bem-vindo!</p>
+          <p class="language-en welcome-text" style="display: none">Welcome!</p>
 
           <ul id="social-container">
-            <li>
-              <a href="https://wa.me/5519999255022" target="_blank"
-                ><ion-icon name="logo-whatsapp"></ion-icon
-              ></a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/kauã-aissa-b89089343/"
-                target="_blank"
-                ><ion-icon name="logo-linkedin"></ion-icon
-              ></a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/fx.aissa/" target="_blank"
-                ><ion-icon name="logo-instagram"></ion-icon
-              ></a>
-            </li>
+            <li><a href="https://wa.me/5519999255022" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+            <li><a href="https://www.linkedin.com/in/kauã-aissa-b89089343/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            <li><a href="https://www.instagram.com/fx.aissa/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
           </ul>
 
           <div id="email-container">
             <ion-icon name="mail-outline"></ion-icon>
-            <a href="mailto:kaua.aissa.dev@gmail.com.br"
-              >kaua.aissa.dev@gmail.com.br</a
-            >
+            <a href="mailto:kaua.aissa.dev@gmail.com.br">kaua.aissa.dev@gmail.com.br</a>
           </div>
         </aside>
 
         <section id="about-container">
           <h1 id="name">Kauã Aissa</h1>
 
-          <p id="title" class="language-pt">
+          <p class="language-pt title">
             <span class="highlight">Desenvolvedor Full Stack</span> e
-            <span class="highlight"
-              >Estudante de Analise e Desenvolvimento de Sistemas</span
-            >
+            <span class="highlight">Estudante de Análise e Desenvolvimento de Sistemas</span>
           </p>
-          <p id="title" class="language-en" style="display: none">
+          <p class="language-en title" style="display: none">
             <span class="highlight">Full Stack Developer</span> and
-            <span class="highlight"
-              >Student of systems analysis and development</span
-            >
+            <span class="highlight">Student of Systems Analysis and Development</span>
           </p>
 
           <p class="description language-pt">
-            Sou um desenvolvedor apaixonado por tecnologia, com experiência em
-            todas as etapas de um projeto, desde a
-            <span class="highlight"
-              >definição de regras de negócio e levantamento de requisitos</span
-            >
-            até o
+            Sou um desenvolvedor apaixonado por tecnologia, com experiência em todas as etapas de um projeto, desde a
+            <span class="highlight">definição de regras de negócio e levantamento de requisitos</span> até o
             <span class="highlight">deploy e monitoramento da aplicação</span>.
           </p>
           <p class="description language-en" style="display: none">
-            I am a developer passionate about technology, with experience in all
-            stages of a project, from
-            <span class="highlight"
-              >business rules definition and requirements gathering</span
-            >
-            to
-            <span class="highlight">application deployment and monitoring</span
-            >.
+            I am a developer passionate about technology, with experience in all stages of a project, from
+            <span class="highlight">business rules definition and requirements gathering</span> to
+            <span class="highlight">application deployment and monitoring</span>.
           </p>
 
           <p class="description language-pt">
-            Atuo como <span class="highlight">desenvolvedor Full Stack</span>,
-            trabalhando tanto no <span class="highlight">front-end</span> quanto
-            no <span class="highlight">back-end</span>. Atualmente, também me
-            especializo em
-            <span class="highlight"
-              >RPA (Automação de Processos Robóticos)</span
-            >
-            com Python, criando soluções que integram e-mails, bancos de dados
-            corporativos e sistemas.
+            Atuo como <span class="highlight">desenvolvedor Full Stack</span>, trabalhando tanto no <span class="highlight">front-end</span> quanto no <span class="highlight">back-end</span>. Atualmente, também me especializo em
+            <span class="highlight">RPA (Automação de Processos Robóticos)</span> com Python, criando soluções que integram e-mails, bancos de dados corporativos e sistemas.
           </p>
           <p class="description language-en" style="display: none">
-            I work as a <span class="highlight">Full Stack Developer</span>,
-            handling both <span class="highlight">front-end</span> and
-            <span class="highlight">back-end</span>. Currently, I am also
-            specializing in
-            <span class="highlight">RPA (Robotic Process Automation)</span>
-            with Python, building solutions that integrate emails, corporate
-            databases and systems.
+            I work as a <span class="highlight">Full Stack Developer</span>, handling both <span class="highlight">front-end</span> and <span class="highlight">back-end</span>. Currently, I am also specializing in
+            <span class="highlight">RPA (Robotic Process Automation)</span> with Python, building solutions that integrate emails, corporate databases and systems.
           </p>
 
           <p class="description language-pt">
-            Sou motivado pelo
-            <span class="highlight">aprendizado contínuo</span>, sempre buscando
-            aprimorar minhas habilidades técnicas e desenvolver soluções
-            eficientes e impactantes. Tenho nível avançado de
-            <span class="highlight">inglês</span>, o que me permite colaborar em
-            projetos internacionais e acessar conteúdo técnico de ponta.
+            Sou motivado pelo <span class="highlight">aprendizado contínuo</span>, sempre buscando aprimorar minhas habilidades técnicas e desenvolver soluções eficientes e impactantes. Tenho nível avançado de
+            <span class="highlight">inglês</span>, o que me permite colaborar em projetos internacionais e acessar conteúdo técnico de ponta.
           </p>
           <p class="description language-en" style="display: none">
-            I am driven by <span class="highlight">continuous learning</span>,
-            always seeking to enhance my technical skills and create efficient,
-            impactful solutions. I have an advanced level of
-            <span class="highlight">English</span>, which allows me to
-            collaborate on international projects and access cutting-edge
-            technical content.
+            I am driven by <span class="highlight">continuous learning</span>, always seeking to enhance my technical skills and create efficient, impactful solutions. I have an advanced level of
+            <span class="highlight">English</span>, which allows me to collaborate on international projects and access cutting-edge technical content.
           </p>
 
-          <a href="https://github.com/KauaAissa" id="btn-projects"
-            ><ion-icon name="share-social-outline"></ion-icon>
+          <a href="https://github.com/KauaAissa" id="btn-projects">
+            <ion-icon name="share-social-outline"></ion-icon>
             <span class="language-pt">Ver Projetos</span>
             <span class="language-en" style="display: none">View Projects</span>
           </a>
 
-          <h2 id="skills-section-title" class="language-pt">Minhas Skills</h2>
-          <h2
-            id="skills-section-title"
-            class="language-en"
-            style="display: none"
-          >
-            My Skills
-          </h2>
-
-          <p class="description language-pt">
-            Conheça as tecnologias que domino:
-          </p>
-          <p class="description language-en" style="display: none">
-            Here are the technologies I master:
-          </p>
+          <h2 class="language-pt skills-section-title">Minhas Skills</h2>
+          <h2 class="language-en skills-section-title" style="display: none">My Skills</h2>
 
           <div id="skills-container">
             <div class="skills-box">
@@ -211,17 +203,11 @@
               <p class="skills-title">Back-end</p>
               <i class="devicon-php-plain colored"></i>
               <i class="devicon-nodejs-plain-wordmark colored"></i>
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-                width="50"
-                height="auto"
-              />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="50" height="auto" alt="Python" />
             </div>
             <div class="skills-box">
               <p class="skills-title language-pt">Banco de Dados</p>
-              <p class="skills-title language-en" style="display: none">
-                Databases
-              </p>
+              <p class="skills-title language-en" style="display: none">Databases</p>
               <i class="devicon-mysql-plain-wordmark colored"></i>
               <i class="devicon-mongodb-plain-wordmark colored"></i>
               <i class="devicon-mariadb-original-wordmark"></i>
@@ -230,9 +216,7 @@
             </div>
             <div class="skills-box">
               <p class="skills-title language-pt">Ferramentas</p>
-              <p class="skills-title language-en" style="display: none">
-                Tools
-              </p>
+              <p class="skills-title language-en" style="display: none">Tools</p>
               <i class="devicon-vscode-plain-wordmark colored"></i>
               <i class="devicon-git-plain-wordmark colored"></i>
               <i class="devicon-github-original-wordmark"></i>
@@ -241,21 +225,73 @@
               <i class="devicon-postman-plain colored"></i>
             </div>
           </div>
+
+          <div class="carousel-section">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/foto1.jpg" alt="Projeto 1"></div>
+                <div class="swiper-slide"><img src="img/foto2.jpg" alt="Projeto 2"></div>
+                <div class="swiper-slide"><img src="img/foto3.jpg" alt="Projeto 3"></div>
+                <div class="swiper-slide"><img src="img/foto4.jpg" alt="Projeto 4"></div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
         </section>
       </main>
     </div>
-    <!-- Script Transition -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <!-- Ion Icons -->
-    <script
-      type="module"
-      src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="js/scripts.js"></script>
+
+    <script>
+      // Inicialização do Swiper
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        grabCursor: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 2 },
+        }
+      });
+
+      // Lógica de Troca de Idioma
+      const langBtn = document.getElementById('language-toggle');
+      const ptElements = document.querySelectorAll('.language-pt');
+      const enElements = document.querySelectorAll('.language-en');
+      let currentLang = 'pt';
+
+      langBtn.addEventListener('click', () => {
+        if (currentLang === 'pt') {
+          ptElements.forEach(el => el.style.display = 'none');
+          enElements.forEach(el => el.style.display = 'block');
+          currentLang = 'en';
+        } else {
+          ptElements.forEach(el => el.style.display = 'block');
+          enElements.forEach(el => el.style.display = 'none');
+          currentLang = 'pt';
+        }
+      });
+    </script>
   </body>
 </html>
